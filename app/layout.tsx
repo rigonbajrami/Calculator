@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Calculator App",
+  title: "Calculator App - Rigon",
   description: "A modern calculator built with Next.js",
 };
 
