@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaultify</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">Login</h1>
+            
+            <div id="error" class="error" style="display: none;"></div>
+
+            <form id="loginForm" class="form">
+                <div class="form-group">
+                    <label for="email" class="label">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        class="input"
+                        placeholder="Email"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="label">Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        required
+                        class="input"
+                        placeholder="Password"
+                    />
+                </div>
+
+                <button
+                    type="submit"
+                    id="submitButton"
+                    class="button"
+                >
+                    Login
+                </button>
+            </form>
+
+            <p class="text-center text-sm" style="margin-top: 1rem">
+                Don't have an account?
+                <a href="/register" class="link">Register</a>
+            </p>
+        </div>
+    </div>
+    <script src="/js/auth.js"></script>
+</body>
+</html> 

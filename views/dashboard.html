@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Password Manager</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="loading" class="container" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="nav">
+        <h1 class="title">Password Manager</h1>
+        <button id="signOutButton" class="button">Sign Out</button>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-header">
+            <h2 class="title">Your Passwords</h2>
+            <button id="addPasswordButton" class="button">Add New Password</button>
+        </div>
+
+        <div id="passwordGrid" class="password-grid">
+            <!-- Password cards will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- Add Password Modal -->
+    <div id="addPasswordModal" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal">&times;</button>
+            <h2 class="title">Add New Password</h2>
+            <form id="addPasswordForm" class="form">
+                <input type="text" name="title" placeholder="Title" required class="input">
+                <input type="text" name="username" placeholder="Username" required class="input">
+                <input type="password" name="password" placeholder="Password" required class="input">
+                <input type="url" name="url" placeholder="Website URL" class="input">
+                <textarea name="notes" placeholder="Notes" class="input"></textarea>
+                <button type="submit" class="button">Save Password</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Password Modal -->
+    <div id="viewPasswordModal" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal">&times;</button>
+            <h2 id="viewPasswordTitle" class="title"></h2>
+            <div class="form">
+                <p>Username: <span id="viewPasswordUsername"></span></p>
+                <p>Password: <span id="viewPasswordValue"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html> 
